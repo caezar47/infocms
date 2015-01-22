@@ -1,0 +1,2 @@
+# infocms
+Репозиторий для infocms
