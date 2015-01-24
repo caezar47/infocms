@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU">
+	<head>
+		<meta charset="utf-8">		
+		<title><?=$title?></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="Description" content="<?=$description?>">
+		<meta name="Keywords" content="<?=$keywords?>">	
+
+		<link type="image/x-icon" href="/favicon.ico" rel="shortcut icon" />
+		<link type="image/x-icon" href="/favicon.ico" rel="shortcut" />
+		<link type="image/x-icon" href="/favicon.ico" rel="icon" />
+	
+		<!-- Bootstrap -->
+		<link href="./css/bootstrap.css" rel="stylesheet" media="screen">
+		<!-- design -->
+		<link rel="stylesheet" type="text/css" href="./css/text.css" />
+		<link rel="stylesheet" type="text/css" href="./css/styles.css" />
+		<!-- plugins -->				
+		<link rel="stylesheet" type="text/css" href="./plugins/validation-engine/css/validationEngine.jquery.css" />
+		<link rel="stylesheet" type="text/css" href="./plugins/fancybox/source/jquery.fancybox.css?v=2.1.4" media="screen" />
+		<link rel="stylesheet" type="text/css" href="./plugins/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />		
+		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		
+		<script src="./js/jquery-1.9.0.min.js"></script>
+		
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./plugins/validation-engine/js/jquery.validationEngine-ru.js"></script> 
+		<script src="./plugins/validation-engine/js/jquery.validationEngine.js"></script>
+		<script src="./js/jquery.maskedinput.min.js"></script>
+		
+		<script src="./plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+		<script src="./plugins/fancybox/source/jquery.fancybox.js?v=2.1.4"></script>
+		<script src="./plugins/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+		<script>
+		$(document).ready(function() {
+			$('.fancybox').fancybox();
+			// конструкция для активации fancybox <a class="fancybox-buttons" data-fancybox-group="button" href="" data-title=""><img src="" alt="" /></a>
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = this.title;
+				}
+				
+			});
+			
+			$('.maskedinput-phone').mask("+7 (999) 999-99-99");
+		});
+		//$(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(window).scrollTop()!="0"){$(this).fadeIn("slow")}var scrollDiv=$(this);$(window).scroll(function(){if($(window).scrollTop()=="0"){$(scrollDiv).fadeOut("slow")}else{$(scrollDiv).fadeIn("slow")}});$(this).click(function(){$("html, body").animate({scrollTop:0},"slow")})}});
+
+		</script>
+		<!--[if lt IE 9]> 
+		   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+		<![endif]-->
+		<!--[if gte IE 9]>
+			<style type="text/css">
+				#header, .nav, .name-box {
+					filter: none;
+				}
+			</style>
+		<![endif]-->
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="http://getbootstrap.com/docs-assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>	
+		<div class="container">
+			<a class="scrollTop" id="toTop" >Вверх</a>
+			<script> 
+			$(function() { 
+				$("#toTop").scrollToTop(); 
+			}); 
+			</script>
+		
+			<header id="header" class="row">
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 logotip">
+					<a href="/"><img src="" alt="" title="" /></a>
+				</div>
+				<div class="h-phone col-lg-4 col-md-4 col-sm-4 col-xs-12">			
+				</div>
+			</header>
+			<div id="content" class="row">	
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" >
+					<h2>Sidebar first</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<main class="col-lg-9 col-md-9 col-sm-9 col-xs-12" role="main">
+					<h2>Main content</h2>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+
+					<div class="news-page boxing">
+						<div class="news-index boxing">
+							<article class="news-echo boxing">
+								<div class="row">
+									<div class="preview col-lg-3 col-md-3 col-sm-3 col-xs-12">
+										<a href="/novosti/{$news.url}">
+											<img src="/{$news.img_index}" alt="{$news.news_header}" title="{$news.news_header}" />
+										</a>
+									</div>		
+									<div class="note col-lg-9 col-md-9 col-sm-9 col-xs-12">	
+										<time class="data" datetime="{$news.data|date_format:"%Y-%m-%e"}">{$news.data|date_format:"%e %m %Y"}</time>	
+										<h4 class="header">						
+											<a href="/novosti/{$news.url}">Nemo enim ipsam voluptatem quia</a>
+										</h4>
+										<div class="short">consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut</div>
+									</div>
+								</div>
+							</article>
+							<article class="news-echo boxing">
+								<div class="row">
+										
+									<div class="note col-lg-12 col-md-12 col-sm-12 col-xs-12">
+										<time class="data" datetime="{$news.data|date_format:"%Y-%m-%e"}">{$news.data|date_format:"%e %m %Y"}</time>	
+										<h4 class="header">emo enim ipsam voluptatem quia</h4>
+										<div class="short">consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut</div>
+									</div>
+								</div>
+							</article>
+
+						</div>
+					</div>
+					<div class="boxing docs-box">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 docs-echo">
+								<a href="/{$doc.file}.docx" target="_blank"><span>{$doc.name}</span></a>
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 docs-echo">
+								<a href="/{$doc.file}.doc" class="docs-link" target="_blank">{$doc.name}</a>
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 docs-echo">
+								<a href="/{$doc.file}.rar" class="docs-icon" target="_blank">скачать</a>
+								<a href="/{$doc.file}.rar" class="docs-link" target="_blank">{$doc.name}</a>
+							</div>
+						</div>
+					</div>
+
+				</main>			
+			</div>
+			<footer id="footer" class="row">
+				<div class="f-copyright col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<p>&copy; 2015.</p>
+					<p>Все права защищены.</p>
+				</div>
+				<div class="f-address col-lg-3 col-md-3 col-sm-3 col-xs-12">
+					<!-- adress -->
+				</div>
+				<div class="f-counts col-lg-2 col-md-2 col-sm-2 col-xs-12">
+					<div id="liveInternet">
+						<!--LiveInternet counter-->
+						
+						<!-- ends LiveInternet counter-->
+					</div>
+					<div id="count-noviews">
+						<!-- CNStats -->
+					
+						<!-- ends CNStats -->
+						
+						<!-- Yandex.Metrika counter -->
+						
+						<!-- End's Yandex.Metrika counter -->
+						
+						<!-- Mail.ru counter -->
+						
+						<!-- Ends's Mail.ru counter -->
+					</div>
+				</div>
+				<div class="f-autor col-lg-2 col-md-2 col-sm-2 col-xs-12">
+					<div><a href="http://www.info-city.su/" target="_blank" class="no-link">Создание сайта</a></div>
+					<div><a href="http://www.info-city.su/" target="_blank"><img src="./images/inc/infocity.png" alt="Разработка, создание, раскрутка и продвижение сайтов в Орле :: Web-студия «Инфо-Сити»" class="img-responsive" title="Web-студия «Инфо-Сити»"></a></div>
+				</div>
+				<div class="autor col-lg-2 col-md-2 col-sm-2 col-xs-12">
+					<p><a href="http://www.don.ua/sites/" target="_blank" class="no-link">Создание сайта</a></p>
+					<p><a href="http://www.don.ua/sites/" target="_blank">Don.ua</a></p>
+				</div>
+                <div class="autor col-lg-2 col-md-2 col-sm-2 col-xs-12 tar">
+					<img style="max-width: 150px;" src="/images/inc/PR&amp;Info-city.jpg" alt="Разработка, создание, раскрутка и продвижение сайтов в Орле :: Web-студия «Инфо-Сити»" title="Web-студия «Инфо-Сити»">
+					<a href="http://www.vbalashihe.ru/firma.php?id=1043" target="_blank" class="vbal"></a>						
+					<a href="http://www.info-city.su/" target="_blank" class="infociti"></a>
+				</div>
+			</footer>
+		</div>
+   
+	</body>
+</html>
