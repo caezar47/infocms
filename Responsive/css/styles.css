@@ -413,33 +413,40 @@ p{
 ----------------------------------------------------------------------------------------------------*/
 /* Gallery
 ----------------------------------------------------------------------------------------------------*/
-.photogal-sec-echo{}
-.photogal-sec-echo .img{margin-bottom: 10px;}
-.photogal-sec-echo .link{text-align: center;}
+.gal-page{}
+/* all gal*/
+.gal-echo{margin-bottom:20px;}
+.gal-echo .preview{}
+.gal-echo .preview a,
+.gal-echo .preview img{}
 
-.fotogal-box .photo-echo a{
-	display: block;
-	height: 85px;
-	overflow: hidden;	
-}
-.fotogal-box .photo-echo a img{min-height: 85px;}
-@media (min-width: 1200px) {
-	.fotogal-box .photo-echo a{height: 105px;}
-	.fotogal-box .photo-echo a img{min-height: 105px;}
-}
-@media (max-width: 991px) and (min-width: 768px) {
-	.fotogal-box .photo-echo a{height: 60px;}
-	.fotogal-box .photo-echo a img{min-height: 60px;}
-}
-@media (max-width: 767px) {	
-	.fotogal-box .photo-echo a{
-		display: block;
-		height: auto;
-		overflow: visible;
-		width: 260px;
-		margin: 0 auto;	
-	}
-}
+.gal-echo .header{}
+.gal-echo .header a{}
+
+/* gal-block.tpl*/
+.gal-block .gal-echo{}
+.gal-block .gal-echo .preview{}
+.gal-block .gal-echo .preview a,
+.gal-block .gal-echo .preview img{}
+
+.gal-block .gal-echo .header{}
+.gal-block .gal-echo .header a{}
+
+/* gal-section.tpl*/
+.gal-section .gal-echo{}
+.gal-section .gal-echo .preview{}
+.gal-section .gal-echo .preview a,
+.gal-section .gal-echo .preview img{}
+
+.gal-section .gal-echo .header{}
+.gal-section .gal-echo .header a{}
+
+
+/* gal-index.tpl*/
+.gal-index .gal-echo{}
+.gal-index .gal-echo .preview{}
+.gal-index .gal-echo .preview a,
+.gal-index .gal-echo .preview img{}
 /* ends Gallery
 ----------------------------------------------------------------------------------------------------*/
 
