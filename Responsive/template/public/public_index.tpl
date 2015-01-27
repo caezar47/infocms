@@ -1,5 +1,6 @@
 <div class="pub-page boxing">
-	<div class="pub-cat-note boxing mb">{$catName.note}</div>
+	<h1 class="page-header">{$catName.name}</h1>
+	{if $catName.note neq ''}<div class="pub-cat-note boxing mb">{$catName.note}</div>{/if}
 	<div class="pub-index boxing">
 	{foreach item=public from=$tData}
 		<article class="pub-echo boxing">
@@ -8,7 +9,7 @@
 				<div class="preview col-lg-3 col-md-3 col-sm-3 col-xs-12">
 					{if $public.content neq ''}
 					<a href="/{$catName.url}/{$public.url}">
-						<img src="/{$news.img_index}" alt="{$news.news_header}" title="{$public.header}" />
+						<img src="/{$public.img_index}" alt="{$public.header}" title="{$public.header}" />
 					</a>
 					{else}
 					<div>
