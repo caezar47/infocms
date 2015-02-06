@@ -1,0 +1,33 @@
+/*Basic HTML*/
+body {
+  color: #404040;
+  background: #ffffff;
+}
+a {
+  color: #2d81f4;
+  text-decoration: none;
+}
+a:hover {
+  color: #0b5bca;
+  text-decoration: underline;
+}
+a[href^="tel:"]:hover,
+a[href^="mailto:"]:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3 {
+  font-family: 'PFBeauSansPro';
+  margin: 0 0 10px;
+  line-height: 36px;
+}
+/*ends Basic HTML*/
+/*Header*/
+/*ends Header*/
+/*Content*/
+/*ends Content*/
+/*Footer*/
+/*ends Footer*/
+/*News*/
+/*ends News*/
