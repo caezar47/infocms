@@ -1,0 +1,1 @@
+<!-- Стандартный вывод статей и материалов (раздела для сео) --><?php	if (preg_match('/^[a-zA-Z0-9_-]{1,}$/', $_GET['id_public'])) {		$PublicseoModule->view(array ('url' => $_GET['id_public']));	} else {		$PublicseoModule->index(array ('limit' => 8, 'pagination' => true, 'section_include' => array (1)));	}?>

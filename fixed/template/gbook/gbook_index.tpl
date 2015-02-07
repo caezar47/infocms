@@ -1,10 +1,10 @@
-﻿<aside class="boxing reviews-box">
-	<div class="boxing">
+﻿<div class="gb-page boxing">
+	<div class="gb-index boxing">
 		{foreach item=gbook from=$tData}
-		<article class="boxing reviews-echo mb pb">
-			<p class="reviews-text">{$gbook.body}</p>
-			<p class="reviews-fio">{$gbook.name}</p>
-		</article>
+		<div class="gb-echo boxing">
+			<p class="note">{$gbook.body}</p>
+			<p class="header">{$gbook.name}</p>
+		</div>
 		{/foreach}
 	</div>
-</aside>
+</div>

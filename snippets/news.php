@@ -1,0 +1,1 @@
+<!-- Стандартный вывод новостей через url --><?php	if (preg_match('/^[a-zA-Z0-9_-]{1,}$/', $_GET['id_news'])) {		$NewsModule->view(array ('url' => $_GET['id_news'], 'id' => $_GET['id_news']));	} else {		$NewsModule->index(array('pagination' => true, 'limit' => 6, 'section_include' => array (1)));	}?>

@@ -1,0 +1,1 @@
+<!-- Вывод альбома id=1 через функцию index шаблон gal_index.tpl, ограничение 12 фотографий, постраничная навигация включена --><?php $GalleryModule->index(array ('section_include' => array (1), 'limit' = > 12, 'pagination' => true));?>
