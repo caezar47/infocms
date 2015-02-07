@@ -1,0 +1,51 @@
+.liquid {
+	border:3px solid rgb(192, 42, 42);
+	position:relative;	
+	padding: 25px 0;
+}
+.liquid .wrapper{
+}
+.liquid .previous,
+.liquid .next {	
+	position:relative;
+	float:left;
+	width:45px;
+	height:100px;
+}
+.liquid .next {	
+	float:right;
+}
+.liquid .previous .glyphicon,
+.liquid .next .glyphicon{
+	font-size: 20px;
+	display: block;
+    height: 26px;
+    width: 26px;
+	position:absolute;
+	top:40%;
+}
+.liquid .previous .glyphicon:hover ,
+.liquid .next .glyphicon:hover {
+	color:rgb(192, 42, 42);
+}
+.liquid .previous .glyphicon{
+	left:15px;
+}
+.liquid .next .glyphicon{
+	right:15px;
+}
+.liquid ul li {
+	width:175px;
+	padding:0 10px;
+	margin:0;
+    line-height: 125px;
+}
+.liquid ul li a img {
+	-moz-box-shadow: 5px 5px 3px #222;
+   	-webkit-box-shadow: 5px 5px 3px #222;
+   	box-shadow: 5px 5px 3px #222;
+}
+.liquid ul li  img {
+	/*max-width:126px;
+	max-height:126px;*/
+}
