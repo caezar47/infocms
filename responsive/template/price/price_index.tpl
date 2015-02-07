@@ -1,42 +1,42 @@
-<h1 class="title-page">{$catName.name}</h1>			
-<ul class="breadcrumb">
-	<li>
-		<a href="/">Главная</a> <span class="divider">/</span>
-	</li>
-	<li>
-		<a href="/katalog.php">Каталог</a> <span class="divider">/</span>
-	</li>
-
-	{foreach item=bread from=$breads name=breadFOR} 
-		<!--<li><a href="?cat_id={$bread.id}">{$bread.name}</a> <span class="divider">/</span></li>-->
-		{if $smarty.foreach.breadFOR.total eq 1}
-			<li class="active">{$bread.name}</li>
-		{else}
-			{if $smarty.foreach.breadFOR.last}
+<div class="price-page">
+	<h1 class="page-header">{$category.name}</h1>			
+	<ul class="breadcrumb">
+		<li>
+			<a href="/">Главная</a> 
+		</li>
+		<li>
+			<a href="/katalog.php">Каталог</a>
+		</li>
+		{foreach item=bread from=$breads name=breadFOR} 
+			{if $smarty.foreach.breadFOR.total eq 1}
 				<li class="active">{$bread.name}</li>
-				{else}
-				<li><a href="?cat_id={$bread.id}">{$bread.name}</a> <span class="divider">/</span></li>
-			{/if}
-		{/if}
-	{/foreach}
-</ul>
-	
-	
-<div class="category-index" >
-<ul class="thumbnails">
-	{foreach item=price from=$tData}
-		<li class="span3" >
-			<div class="thumbnail">
-				<a href="?item_id={$price.id}" title="{$price.name}" class="thumbnail">
-				{if $price.img_index neq ''}
-					<img src="{$price.img_index}" alt="{$price.name}" />
-				{else}
-					<img src="/images/inc/no-img.jpg" class="no-img" alt="" />
+			{else}
+				{if $smarty.foreach.breadFOR.last}
+					<li class="active">{$bread.name}</li>
+					{else}
+					<li><a href="?cat_id={$bread.id}">{$bread.name}</a></li>
 				{/if}
-				</a>
-				<h5><a href="?item_id={$price.id}" title="{$price.name}">{$price.name}</a></h5>				
-			</div>
-		</li>	
-	{/foreach}
+			{/if}
+		{/foreach}
 	</ul>
- </div>
+	{if $category.note neq ''}
+	<div class="price-cat-note">{$category.note}</div>
+	{/if}
+	<div class="price-index row" >
+	{foreach item=price from=$tData}
+		<div class="price-echo col-xs-3">
+			<a href="?item_id={$price.id}" title="{$price.name}">
+				<span class="preview">					
+					{if $price.img_index neq ''}
+						<img src="{$price.img_index|replace:'.':'_sm.'}" alt="{$price.name}" class="ing-responsive" />
+					{else}
+						<img src="/images/inc/no-img.jpg" class="ing-responsive" alt="" />
+					{/if}
+					</a>
+				</span>				
+				<h5 class="header">{$price.name}</h5>
+			</a>				
+		</div>	
+	{/foreach}
+	</div>
+</div>

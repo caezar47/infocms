@@ -7,6 +7,7 @@
 		<li>
 			<a href="/katalog.php">Каталог</a>
 		</li>
+
 		{foreach item=bread from=$breads name=breadFOR} 
 			{if $smarty.foreach.breadFOR.total eq 1}
 				<li class="active">{$bread.name}</li>
@@ -19,16 +20,17 @@
 			{/if}
 		{/foreach}
 	</ul>
+
 	{if $category.note neq ''}
 	<div class="price-cat-note">{$category.note}</div>
 	{/if}
-	<div class="price-index row" >
+	<div class="price-child row" >
 	{foreach item=price from=$tData}
 		<div class="price-echo col-xs-3">
-			<a href="?item_id={$price.id}" title="{$price.name}">
+			<a href="?cat_id={$price.id}" title="{$price.name}">
 				<span class="preview">					
 					{if $price.img_index neq ''}
-						<img src="{$price.img_index|replace:'.':'_sm.'}" alt="{$price.name}" class="ing-responsive" />
+						<img src="{$price.img_index}" alt="{$price.name}" class="ing-responsive" />
 					{else}
 						<img src="/images/inc/no-img.jpg" class="ing-responsive" alt="" />
 					{/if}
