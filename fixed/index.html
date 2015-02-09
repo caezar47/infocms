@@ -58,6 +58,8 @@
 			});
 			
 			$('.maskedinput-phone').mask("+7 (999) 999-99-99");
+			var url = window.location.pathname;
+			$('.nav a[href="'+url+'"]').parent().addClass('active');
 		});
 		//$(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(window).scrollTop()!="0"){$(this).fadeIn("slow")}var scrollDiv=$(this);$(window).scroll(function(){if($(window).scrollTop()=="0"){$(scrollDiv).fadeOut("slow")}else{$(scrollDiv).fadeIn("slow")}});$(this).click(function(){$("html, body").animate({scrollTop:0},"slow")})}});
 
