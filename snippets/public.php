@@ -1,0 +1,1 @@
+<!-- Стандартный вывод публикаций--><?php	if (preg_match('/^[a-zA-Z0-9_-]{1,}$/', $_GET['id_public'])) {		$PublicModule->view(array ('url' => $_GET['id_public']));	} else {		$PublicModule->index(array ('section_include' => array (1), 'limit' => 8, 'pagination' => true ));	}?>
