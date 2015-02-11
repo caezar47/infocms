@@ -1,8 +1,8 @@
-{foreach item=catName from=$tData}
+{foreach item=section from=$tData}
 <div class="pub-page boxing">
-	<div class="pub-cat-note boxing mb">{$catName.note}</div>
+	{if $section.note neq ''}<div class="pub-cat-note boxing mb">{$section.note}</div>{/if}
 	<div class="pub-index boxing">
-	{foreach item=public from=$public.public}
+	{foreach item=public from=$section.public}
 		<article class="pub-echo boxing">					
 			<div class="note">	
 				<h4 class="header">
