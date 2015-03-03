@@ -25,6 +25,14 @@
 				{/foreach} 
 			</div>
 		</div>
-		<div class="btn-more boxing"><a href="javascript:history.back()">Назад</a></div>
+		<!-- <div class="btn-more boxing"><a href="javascript:history.back()">Назад</a></div> -->
+		
+		{if $prev_pub.id neq 0}
+			<div class="btn-more pull-left"><a href="/nasha-voda/{$prev_pub.url}">&larr; {$prev_pub.header}</a></div>
+		{/if}
+		
+		{if $next_pub.id neq 0}
+			<div class="btn-more pull-right"><a href="/nasha-voda/{$next_pub.url}">{$next_pub.header} &rarr;</a></div>
+		{/if}
 	</div>
 </div>   
