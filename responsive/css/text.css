@@ -1,11 +1,6 @@
 @charset "utf-8";
 /* `Basic HTML
 ----------------------------------------------------------------------------------------------------*/
-
-body{
-  font: 14px/1.5  Arial, 'Helvetica Neue', Tahoma, 'Liberation Sans', FreeSans, sans-serif;
-}
-
 pre,
 code {
   font-family: 'DejaVu Sans Mono', Menlo, Consolas, monospace;
@@ -27,23 +22,6 @@ hr{
 	font-weight: normal;
 	font-style: normal;
 }
-
-/* Headings
-----------------------------------------------------------------------------------------------------*/
-h1 {font-size: 24px;}
-h2 {font-size: 20px;}
-h3 {font-size: 18px;}
-h4 {font-size: 16px;}
-h5 {font-size: 14px;}
-h6 {font-size: 12px;}
-h1,h2,h3,h4,h5,h6 {
-	color: rgb(0, 0, 0);
-	font-weight: normal;
-}
-/* ends Headings
-----------------------------------------------------------------------------------------------------*/
-
-
 /* Spacing
 ----------------------------------------------------------------------------------------------------*/
 ol {
@@ -54,19 +32,8 @@ ul {
 	list-style: disc;
 }
 
-li {
-	margin-left: 30px;
-}
-
-p,
 dl,
 hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 ol,
 ul,
 pre,

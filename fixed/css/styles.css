@@ -1,26 +1,6 @@
 @charset "utf-8";
 /* `Basic HTML
 ----------------------------------------------------------------------------------------------------*/
-html {height:auto}
-body {
-	background: rgb(255, 255, 255);
-	color: rgb(54, 54, 54);
-	height: auto;  
-	min-width: 960px;
-}
-a{
-	color: rgb(0, 60, 255);
-	text-decoration: underline;
-}
-a:hover{
-	color: rgb(0, 60, 255);
-	text-decoration: none;
-}
-p{
-	line-height: 160%;
-	margin: 0 0 1%;
-}
-
 /* Box model */
 .boxing{float:left; width:100%}
 .fl{float:left}
@@ -59,14 +39,6 @@ p{
 	cursor: pointer;
 } 
 /* Ends Key */
-
-/*Social Networks - widget*/
-.mail{width:225px}
-.facebook{width:105px}
-.twitter{width:100px}
-.vk{width:125px}
-/*end Social Networks - widget*/
-
 .no-link{
 	text-decoration:none;
 	color: rgb(51, 51, 51);
@@ -82,30 +54,6 @@ p{
 	-moz-border-radius:5px;
 	border-radius:5px;
 }
-.photo-box{
-	margin-bottom:10px;
-	max-width: 220px;
-}
-.photo-box a{
-	width:220px;
-	height:220px;
-	text-align:center;
-	vertical-align:middle;
-	padding:5px;
-	border:1px solid rgb(226, 229, 231);
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	border-radius:5px;
-	display:table-cell;
-}
-.photo-box a img{
-	max-width:210px;
-	max-height:210px;
-}
-.photo-header{
-	font-size:12px;
-	text-align:center;
-}
 @media (max-width:767px){.center-block{display:block; margin-left:auto; margin-right:auto;}}
 .btn{text-decoration:none;}
 /* ends Basic HTML
@@ -114,27 +62,18 @@ p{
 
 /* Header
 ----------------------------------------------------------------------------------------------------*/
-#header{
-	
-}
 /*end Header
 ----------------------------------------------------------------------------------------------------*/
 
 
 /* Contents
 ----------------------------------------------------------------------------------------------------*/
-#content{
-
-}
 
 /*end Contents
 ----------------------------------------------------------------------------------------------------*/
 
 /* Footer
 ----------------------------------------------------------------------------------------------------*/
-#footer{
-	
-}
 /*ends Footer
 ----------------------------------------------------------------------------------------------------*/
 
