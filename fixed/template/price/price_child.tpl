@@ -32,7 +32,7 @@
 					{if $price.img_index neq ''}
 						<img src="{$price.img_index}" alt="{$price.name}" class="ing-responsive" />
 					{else}
-						<img src="/images/inc/no-img.jpg" class="ing-responsive" alt="" />
+						<img src="/images/inc/panel-no-img.jpg" class="ing-responsive" alt="" />
 					{/if}
 					</a>
 				</span>				
