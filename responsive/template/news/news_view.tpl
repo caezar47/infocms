@@ -9,13 +9,20 @@
 			<div class="row">				
 				{foreach item=photo from=$news.photo}
 				<div class="gal-echo col-lg-2 col-md-2 col-sm-2 col-xs-12">
-					<a href="/{$photo.img_index}" class="fancybox-buttons" data-fancybox-group="button" title="{$photo.name}">
+					<a href="/{$photo.img_index}" class="fancybox-buttons" data-fancybox-group="button" {if $photo.name neq ''} data-toggle="tooltip" data-placement="bottom" data-title="{$photo.name}" title="{$photo.name}"{/if}>
 						<img src="/{$photo.img_index|replace:'.':'_sm.'}" alt="{$photo.name}">
 					</a>
 				</div>	
 				{/foreach} 
 			</div>
-		</div>
-		<div class="boxing btn-more"><a href="javascript:history.back()">Назад</a></div>
+		</div>		
+		<!-- <div class="boxing btn-more"><a href="javascript:history.back()">Назад</a></div> -->
+		{if $prev_pub.id neq 0}
+			<div class="btn-more pull-left"><a href="/novosti/{$prev_pub.url}">&larr; {$prev_pub.news_header}</a></div>
+		{/if}
+		
+		{if $next_pub.id neq 0}
+			<div class="btn-more pull-right"><a href="/novosti/{$next_pub.url}">{$next_pub.news_header} &rarr;</a></div>
+		{/if}
 	</div>
 </div>

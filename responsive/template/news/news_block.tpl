@@ -25,8 +25,8 @@
 						{$news.news_header}
 						{/if}
 					</h4>
-					{if $news.news_short ''}
-					<div class="short">{$news.news_short}</div>
+					{if $news.news_short neq ''}
+					<div class="short">{$news.news_short|truncate:140:"..."}</div>
 					{/if}	
 				</div>
 			</div>

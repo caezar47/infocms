@@ -7,8 +7,7 @@
 			<div class="row">
 				{foreach item=doc from=$subdocs}
 				<div class="docs-echo col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<a href="/{$doc.file}" target="_blank">
-					<span>{$doc.name}</span></a>
+					<a href="/public_docs/{$doc.file_name}" class="docs-icon" target="_blank"><span>{$doc.doc_name} (скачать)</span></a>
 				</div>
 				{/foreach}
 			</div>
