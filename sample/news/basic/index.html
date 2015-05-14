@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU">
+	<head>  
+		<meta charset="utf-8">
+		<title>Вывод новостей - basic</title>	
+		<!-- Bootstrap -->
+		<link href="./css/bootstrap.css" rel="stylesheet" media="screen">
+		<!-- design -->
+		<link rel="stylesheet" type="text/css" href="./css/text.css" />
+		<link rel="stylesheet" type="text/css" href="./css/design.css" /> 
+		<link rel="stylesheet" type="text/css" href="./css/styles.css" />
+		<!-- plugins -->				
+		<link rel="stylesheet" type="text/css" href="/plugins/fancybox/source/jquery.fancybox.css?v=2.1.4" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/plugins/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+		 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->		
+		<script src="./js/jquery-2.1.3.min.js"></script> 
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="./js/bootstrap.min.js"></script>	
+		<script src="/js/jquery.maskedinput.min.js"></script>
+		
+		<script src="./plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+		<script src="./plugins/fancybox/source/jquery.fancybox.js?v=2.1.4"></script>
+		<script src="./plugins/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+		<script>
+		$(document).ready(function() {
+			$('.fancybox').fancybox();
+			// конструкция для активации fancybox <a class="fancybox-buttons" data-fancybox-group="button" href="" data-title=""><img src="" alt="" /></a>
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = this.title;
+				}
+			});
+			
+			var url = window.location.pathname;
+			$('.nav a[href="'+url+'"]').parent().addClass('active');
+		});
+		</script>
+		<!--[if lt IE 9]> 
+		   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+		<![endif]-->
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="http://getbootstrap.com/docs-assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-xs-12">
+				<h1 class="page-header">Блок новостей на главной</h1>
+				<h2>Вывод блока новостей для главной страницы</h2>
+				<p>php код ниже или в папке <strong><a href="https://github.com/caezar47/infocms/blob/master/snippets/news.php" target="_blank">snippets/news.php</a></strong></p>				
+				<pre class="mb">$NewsModule->index(array('section_include' => array (1), 'template' => 'news_block.tpl', 'limit' => 2 ));</pre>
+				<p>шаблон выводы в папке temolate <strong><a href="https://github.com/caezar47/infocms/blob/master/snippets/news.php" target="_blank">news_block.tpl</a></strong></p>
+				<div class="row">
+					<div class="col-xs-4 mb">
+						<div class="page-header">Новости <span>ФКУ Упрдор Москва - Харьков</span></div>
+						<div class="news-block boxing">
+							<article class="news-echo boxing">	
+								<time class="data" datetime="2015-05- 6"> 6 мая 2015</time>	
+								<h4 class="header">				
+									<a href="/novosti/Rosavtodor_voditeli_stali_vnimatelnee_k_memorialam">Росавтодор: водители стали внимательнее к мемориалам</a>
+								</h4>
+								<div class="short">Федеральные дорожники отмечают, что водители стали внимательнее и бережнее относиться к мемориалам, расположенным вдоль трасс.</div>
+							</article>
+							<article class="news-echo boxing">	
+								<time class="data" datetime="2015-05- 6"> 6 мая 2015</time>	
+								<h4 class="header">				
+									<a href="/novosti/Rosavtodor_voditeli_stali_vnimatelnee_k_memorialam">Росавтодор: водители стали внимательнее к мемориалам</a>
+								</h4>
+								<div class="short">Федеральные дорожники отмечают, что водители стали внимательнее и бережнее относиться к мемориалам, расположенным вдоль трасс.</div>
+							</article>
+						</div>
+					</div>
+					</div>
+			</div>
+			<hr>
+			<main class="col-xs-12">
+				<h1 class="page-header">Страница новостей</h1>
+				<h2>Вывод блока новостей для страницы новости</h2>	
+				<p>php код</p>			
+				<pre class="mb">
+	if (preg_match('/^[a-zA-Z0-9_-]{1,}$/', $_GET['id_news'])) {
+	$NewsModule->view(array ('url' => $_GET['id_news'], 'id' => $_GET['id_news']));
+	} else {
+	$NewsModule->index(array('pagination' => true, 'limit' => 6, 'section_include' => array (1)));
+	}
+				</pre>
+				<p>шаблон выводы в папке temolate news_index.tpl</p>			
+				<div class="news-index boxing">
+					<article class="news-echo boxing">			
+						<time class="data" datetime="2015-05- 6"> 6 мая 2015</time>	
+						<h4 class="header">
+							<a href="/novosti/Rosavtodor_voditeli_stali_vnimatelnee_k_memorialam">Росавтодор: водители стали внимательнее к мемориалам</a>
+						</h4>
+						<div class="short">Федеральные дорожники отмечают, что водители стали внимательнее и бережнее относиться к мемориалам, расположенным вдоль трасс.</div>
+					</article>
+					<article class="news-echo boxing">			
+						<time class="data" datetime="2015-05- 5"> 5 мая 2015</time>	
+						<h4 class="header">
+							<a href="/novosti/Kollektiv_Uprdor_Moskva__Volgograd_vyshel_na_subbotnik">Коллектив Упрдор «Москва – Волгоград» вышел на субботник</a>
+						</h4>
+						<div class="short">По традиции накануне майских праздников сотрудники ФКУ Упрдор «Москва – Волгоград» проводят субботник на одной из федеральных трасс. На этот раз они решили привести в порядок 464 километр дороги М-6 «Каспий» в Тамбовской области. Это особенное место: здесь на повороте на село Борщевка по инициативе Управления был установлен указатель на дом-музей Героя Советского Союза Зои Космодемьянской.</div>
+					</article>
+				</div>
+			</main>
+			<hr>
+			<main class="col-xs-12">
+				<h1 class="page-header">Страница подробного описания новости</h1>			
+				<p>шаблон выводы в папке temolate news_view.tpl</p>
+				<div class="news-view boxing">
+					<div class="row">
+						<div class="col-xs-8">
+							<time class="data" datetime="2015-05- 6"> 6 мая 2015</time>
+							<h1 class="page-header">Росавтодор: водители стали внимательнее к мемориалам</h1>
+							<div class="text">
+								<p>Сотрудники ФКУ Упрдор «Россия» Федерального дорожного агентства уже много лет следят за состоянием и благоустраивают памятники защитникам Отечества вдоль подведомственных федеральных автодорог. По традиции, в канун Дня Победы в Тверской области приводят в порядок памятник солдату на 216-м километре М-10 «Россия» и монумент «Катюша» на 187-м километре М-9 «Балтия». &nbsp;Еще один пример – площадка отдыха на 234-м километре трассы М-9 «Балтия». После того как в 2013 году здесь установили памятный знак в честь бойцов 29-й армии Калининского фронта, на территории площадки водители соблюдают чистоту и порядок.</p>
+							</div>
+							<div class="row mt">
+								<div class="col-xs-5">
+									<div class="btn-more pull-left"><a href="/novosti/Kollektiv_Uprdor_Moskva__Volgograd_vyshel_na_subbotnik">← Коллектив Упрдор «Москва – Волгоград» вышел на субботник</a></div>
+								</div>
+								<div class="col-md-offset-2 col-xs-5"></div>
+							</div>
+						</div>
+					</div>
+				</div>		   	
+			</main>
+		</div>						
+	</body>
+</html>

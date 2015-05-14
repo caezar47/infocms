@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* `Basic HTML
+----------------------------------------------------------------------------------------------------*/
+pre,
+code {
+  font-family: 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+}
+
+hr{
+	border: 0 rgb(0, 0, 0) solid;
+	border-top-width: 1px;
+	clear: both;
+	height: 0;
+}
+/* Spacing
+----------------------------------------------------------------------------------------------------*/
+ol {
+	list-style: decimal;
+}
+
+ul {
+	list-style: disc;
+}
+
+dl,
+hr,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset,
+figure {
+	margin-bottom: 1%;
+}
+/* ends Spacing
+----------------------------------------------------------------------------------------------------*/
