@@ -1,15 +1,21 @@
-<?php
-$base_name = basename($_SERVER['SCRIPT_NAME'], 1);
-$row = sqlval("select id, id_parent from katalog where language_id='1' and status_id='3' and menu_hide='0' and file_name='{$base_name}'");
-$selected[] = $row['id'];
-while ( $row['id_parent'] != 0 ) {
-	$row = sqlval("select id, id_parent from katalog where language_id='1' and status_id='3' and menu_hide='0' and id='{$row['id_parent']}'");
-	$selected[] = $row['id'];
+<?						
+$menu_sql = sql("SELECT * FROM katalog WHERE menu_hide = '0' ORDER BY menu");
+
+$catalog=array(
+	'list'=>array(),
+	'structure'=>array(),
+	'active'=>$id_page,
+	);
+
+if(mysql_num_rows($menu_sql)) {
+	while($row=mysql_fetch_array($menu_sql)) {
+		$catalog['list'][$row['id']]=$row;
+		$catalog['structure'][$row['id_parent']][$row['id']]=&$catalog['list'][$row['id']];
+	}
+	mysql_data_seek($menu_sql,0);
 }
 
-$result = sql("select * from katalog where  language_id='1' and status_id='3' and menu_hide='0' order by menu asc, katalog.id asc");
-while($row = sqlget($result)){
-      $menu[$row['id_parent']][$row['id']] = array("name" => $row['name'], "file_name" => $row['file_name']);
-}
-ShowMenu( $menu, $selected );
-?>  
+$smarty->assign("menu_tree", $catalog);
+$smarty->display('main_nav.tpl');
+$smarty->clear_all_assign();
+?>
