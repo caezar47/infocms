@@ -1,3 +1,9 @@
+/*main style*/
+/*header style*/
+/*navbar style*/
+/*content style*/
+/*footer style*/
+/*link style*/
 /*Basic HTML*/
 html,
 body {
@@ -9,11 +15,11 @@ body {
   font: 14px/1.428571429 Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 a {
-  color: #00ace3;
+  color: #76b225;
   text-decoration: none;
 }
 a:hover {
-  color: #007296;
+  color: #4c7318;
   text-decoration: underline;
 }
 a[href^="tel:"]:hover,
@@ -60,10 +66,33 @@ h6 {
 }
 /*ends Basic HTML*/
 /*Header*/
+.header-block {
+  background: #e8e8e8;
+  color: #000000;
+}
+.header-block a {
+  color: #ffffff;
+}
+.header-block a:hover {
+  color: #f2f2f2;
+}
 /*ends Header*/
 /*Content*/
+.content-block {
+  background: #28a60b;
+}
 /*ends Content*/
 /*Footer*/
+.header-block {
+  background: #ffffff;
+  color: #ffffff;
+}
+.header-block a {
+  color: #000000;
+}
+.header-block a:hover {
+  color: #000000;
+}
 /*ends Footer*/
 /*News*/
 /*ends News*/

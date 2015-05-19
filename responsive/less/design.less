@@ -5,19 +5,40 @@
 @transparent:	rgba(255, 255, 255, 0);
 @grey: 			rgb(160, 160, 160);
 @grey-light: 	rgb(232, 232, 232);
+@green-bg:		rgb(40, 166, 11);
+@green-border:	rgb(70, 132, 50);
+@green:			rgb(118, 178, 37);
+@green-dark:	rgb(15, 134, 44);
+@sepia:			rgb(108, 74, 7);
 
 
+/*main style*/
 @body-bg:		@white;
 @text-color:  	@black;
-
-@header-bg: 	@white;
-@content-bg: 	@white;
-@footer-bg: 	@white;
-
-@link-color: 				@blue;
-@link-color-hover: 			darken(@link-color, 15%);
+/*header style*/
+@header-bg: 				@grey-light;
+@header-color: 				@black;
 @header-link-color: 		@white;
 @header-link-color-hover: 	darken(@header-link-color, 5%);
+/*navbar style*/
+@navbar-bg:						@transparent;
+@navbar-link-color: 			@black;
+@navbar-link-color-hover: 		@black;
+@navbar-dropdown-link-color: 	@sepia;
+
+/*content style*/
+@content-bg: 		@green-bg;
+@content-color: 	@black;
+@content-block: 	@white;
+/*footer style*/
+@footer-bg: 					@white;
+@footer-color: 					@white;
+@footer-link-color: 			@black;
+@footer-link-color-hover: 		@black;
+
+/*link style*/
+@link-color: 				@green;
+@link-color-hover: 			darken(@link-color, 15%);
 
 @font-family-sans-serif:  Arial, "Helvetica Neue", Helvetica, sans-serif;
 @font-family-base:        @font-family-sans-serif;
@@ -88,13 +109,33 @@ h1,h2,h3,h4,h5,h6 {
 }
 /*ends Basic HTML*/
 /*Header*/
-
+.header-block{
+	background: @header-bg;
+	color: @header-color;
+	a{
+		color:@header-link-color;
+		&:hover{
+			color:@header-link-color-hover;
+		}
+	}
+}
 /*ends Header*/
 /*Content*/
-
+.content-block{
+	background: @content-bg;
+}
 /*ends Content*/
 /*Footer*/
-
+.header-block{
+	background: @footer-bg;
+	color: @footer-color;
+	a{
+		color:@footer-link-color;
+		&:hover{
+			color:@footer-link-color-hover;
+		}
+	}
+}
 /*ends Footer*/
 /*News*/
 /*ends News*/
