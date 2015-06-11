@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* `Basic HTML
+----------------------------------------------------------------------------------------------------*/
+/* Box model */
+.boxing{float:left; width:100%}
+.fl{float:left}
+.fr{float:right}
+
+.mt{margin-top:20px}
+.mr{margin-right:20px}
+.mb{margin-bottom:20px}
+.ml{margin-left:0}
+.pt{padding-top:20px}
+.pr{padding-right:20px}
+.pb{padding-bottom:20px}
+.pl{padding-left:20px}
+
+.cb{clear:both}
+/* End Box model */
+
+/* Text model */
+.tal{text-align:left;}
+.tac{text-align:center;}
+.tar{text-align:right;}
+/* End Text model */
+
+/* Images position */
+.il{float: left; margin: 0 2% 1% 0;}
+.ir{float: right; margin: 0 0 1% 2%;}
+/* end Images position */
+
+/* Buttton */
+.scrollTop{
+	padding: 0 10px;
+	position: fixed;
+	bottom: 55px;
+	left: 92%;
+	z-index: 2000;
+	cursor: pointer;
+} 
+/* Ends Key */
+.no-link{
+	text-decoration:none;
+	color: rgb(51, 51, 51);
+	cursor:default;
+}
+.bs{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.br5{
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+@media (max-width:767px){.center-block{display:block; margin-left:auto; margin-right:auto;}}
+.btn{text-decoration:none;}
+/* ends Basic HTML
+----------------------------------------------------------------------------------------------------*/

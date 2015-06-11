@@ -1,0 +1,150 @@
+/*Basic HTML*/
+html,
+body {
+  height: auto;
+}
+body {
+  color: #000000;
+  background: #ffffff;
+  font: 16px/1.428571429 Arial, "Helvetica Neue", Helvetica, sans-serif;
+  min-width: 960px;
+}
+a {
+  color: #2a5d92;
+  text-decoration: none;
+}
+a:hover {
+  color: #193757;
+  text-decoration: underline;
+}
+a[href^="tel:"]:hover,
+a[href^="mailto:"]:hover {
+  text-decoration: none;
+}
+p {
+  line-height: 1.571428571;
+  margin: 0 0 10px;
+}
+h1,
+h2,
+h3 {
+  font-family: 'ProximaNova-Light';
+  margin: 0 0 10px;
+  line-height: 36px;
+}
+h1 {
+  font-size: 25px;
+}
+h2 {
+  font-size: 22px;
+}
+h3 {
+  font-size: 20px;
+}
+h4 {
+  font-size: 19px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 14px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000;
+  font-weight: 400;
+}
+.no-link:hover {
+  text-decoration: none;
+}
+/*ends Basic HTML*/
+/*News*/
+.news-block {
+  background: #f7f7f7;
+  padding: 23px;
+}
+.news-block.news-border {
+  border: 4px solid #2190d7;
+  background: rgba(255, 255, 255, 0);
+  position: relative;
+  padding: 20px 15px;
+  margin-top: 72px;
+}
+.news-block.news-border .name-block {
+  background: #2190d7;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 5px 15px;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+.news-block .news-echo {
+  margin-bottom: 122px;
+}
+.news-block .news-echo:last-child {
+  margin-bottom: 0px;
+}
+.news-block .news-echo .data {
+  display: block;
+  color: #412626;
+  font-size: 14px;
+}
+.news-block .news-echo .header a {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+}
+.news-block .news-echo .header a:hover {
+  color: #2a5d92;
+  text-decoration: none;
+}
+.news-index {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.news-index .news-echo {
+  margin-bottom: 30px;
+}
+.news-index .news-echo .data {
+  font-size: 14px;
+  color: #666666;
+}
+.news-index .news-echo .header a {
+  font-size: 26px;
+}
+.news-index .news-echo .short {
+  line-height: 26px;
+}
+.news-view .data {
+  display: block;
+  color: #666666;
+  margin-bottom: 20px;
+}
+.news-view .page-header {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+}
+.news-view .text {
+  color: #202020;
+}
+.news-view .news-gal {
+  overflow: hidden;
+  height: 160px;
+}
+.news-view .news-gal .gal-echo {
+  margin-bottom: 20px;
+}
+.news-view .news-gal .gal-echo a {
+  display: block;
+  overflow: hidden;
+  height: 60px;
+}
+/*ends News*/
