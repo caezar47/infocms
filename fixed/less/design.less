@@ -15,6 +15,7 @@
 /*main style*/
 @body-bg:		@white;
 @text-color:  	@black;
+@fixed:			960px;
 /*header style*/
 @header-bg: 				@grey-light;
 @header-color: 				@black;
@@ -55,18 +56,18 @@
 @font-size-h5:            @font-size-base;
 @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
 
-@line-height-base:        1.428571429; // 20/14
-@line-height-p:        	  1.571428571; // 22/14
+@line-height-base:        24px;
+@line-height-p:        	  26px; 
+@line-height-h:        	  30px; 
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
-@headings-font-weight:    400;
+@headings-font-weight:    @normal;
 @headings-color:		  @black;
 
 @float-left: 	left;
 @float-right: 	right;
 
-@icon-custom: 	'icon';
-@icon-color: 	@grey;
+@icon-custom: 	'';
 
 @ultrabold: 	900;
 @bold: 			700;
@@ -87,7 +88,7 @@ body{
 	color:@text-color;
 	background: @body-bg;
 	font:@font-size-base/@line-height-base @font-family-base; 
-	min-width: 960px;
+	min-width: @fixed;
 }
 a {
 	color: @link-color;
@@ -109,7 +110,8 @@ p{
 h1,h2,h3{
 	font-family: @font-family-headings;
 	margin:0 0 10px;
-	line-height: 36px; 
+	line-height: @line-height-h; 
+
 }
 h1 {font-size: @font-size-h1;}
 h2 {font-size: @font-size-h2;}
@@ -140,7 +142,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 /*ends Content*/
 /*Footer*/
-.header-block{
+.footer-block{
 	background: @footer-bg;
 	color: @footer-color;
 	a{
@@ -151,5 +153,3 @@ h1,h2,h3,h4,h5,h6 {
 	}
 }
 /*ends Footer*/
-/*News*/
-/*ends News*/
