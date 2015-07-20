@@ -11,36 +11,12 @@
 @green-dark:	rgb(15, 134, 44);
 @sepia:			rgb(108, 74, 7);
 
-
 /*main style*/
-@body-bg:		@white;
-@text-color:  	@black;
-@fixed:			960px;
-/*header style*/
-@header-bg: 				@grey-light;
-@header-color: 				@black;
-@header-link-color: 		@white;
-@header-link-color-hover: 	darken(@header-link-color, 5%);
-/*navbar style*/
-@navbar-bg:						@transparent;
-@navbar-link-color: 			@black;
-@navbar-link-color-hover: 		@black;
-@navbar-dropdown-link-color: 	@sepia;
-
-/*content style*/
-@content-bg: 		@green-bg;
-@content-color: 	@black;
-@content-block: 	@white;
-/*footer style*/
-@footer-bg: 					@white;
-@footer-color: 					@white;
-@footer-link-color: 			@black;
-@footer-link-color-hover: 		@black;
-
-/*link style*/
-@link-color: 				@green;
-@link-color-hover: 			darken(@link-color, 15%);
-
+@fixed:				960px;
+@body-bg:			@white;
+@text-color:  		@black;
+@link-color: 		@green;
+@link-color-hover: 	darken(@link-color, 15%);
 
 @font-family-sans-serif:  Arial, "Helvetica Neue", Helvetica, sans-serif;
 @font-family-base:        @font-family-sans-serif;
@@ -67,12 +43,33 @@
 @float-left: 	left;
 @float-right: 	right;
 
-@icon-custom: 	'';
-
 @ultrabold: 	900;
 @bold: 			700;
 @normal:		400;
 @light:			300;
+
+/*header style*/
+@header-bg: 				@body-bg;
+@header-color: 				@text-color;
+@header-link-color: 		@white;
+@header-link-color-hover: 	darken(@header-link-color, 5%);
+/*navbar style*/
+@navbar-bg:						@transparent;
+@navbar-color: 					@text-color;
+@navbar-link-color: 			@link-color;
+@navbar-link-color-hover: 		@link-color-hover;
+@navbar-dropdown-link-color: 	@sepia;
+
+/*content style*/
+@content-bg: 		@body-bg;
+@content-color: 	@text-color;
+/*footer style*/
+@footer-bg: 					@white;
+@footer-color: 					@white;
+@footer-link-color: 			@black;
+@footer-link-color-hover: 		@black;
+
+@icon-custom: 	'';
 /*arrows*/
 @arrow-custom: 	"arrows";
 @arrow-color: 	@white;
@@ -122,6 +119,12 @@ h6 {font-size: @font-size-h6;}
 h1,h2,h3,h4,h5,h6 {
 	color: @headings-color;
 	font-weight: @headings-font-weight;
+}
+.headings(@ff, @fs, @lh, @color){
+	font-family: @ff;
+	font-size: @fs;
+	line-height: @lh;
+	color: @color;
 }
 /*ends Basic HTML*/
 /*Header*/

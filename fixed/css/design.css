@@ -3,7 +3,6 @@
 /*navbar style*/
 /*content style*/
 /*footer style*/
-/*link style*/
 /*arrows*/
 /*Basic HTML*/
 html,
@@ -69,7 +68,7 @@ h6 {
 /*ends Basic HTML*/
 /*Header*/
 .header-block {
-  background: #e8e8e8;
+  background: #ffffff;
   color: #000000;
 }
 .header-block a {
@@ -81,7 +80,7 @@ h6 {
 /*ends Header*/
 /*Content*/
 .content-block {
-  background: #28a60b;
+  background: #ffffff;
 }
 /*ends Content*/
 /*Footer*/

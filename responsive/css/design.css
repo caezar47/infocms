@@ -3,7 +3,6 @@
 /*navbar style*/
 /*content style*/
 /*footer style*/
-/*link style*/
 /*arrows*/
 /*screen*/
 /*Basic HTML*/
@@ -15,7 +14,6 @@ body {
   color: #000000;
   background: #ffffff;
   font: 14px/24px Arial, "Helvetica Neue", Helvetica, sans-serif;
-  min-width: 960px;
 }
 a {
   color: #76b225;
@@ -70,7 +68,7 @@ h6 {
 /*ends Basic HTML*/
 /*Header*/
 .header-block {
-  background: #e8e8e8;
+  background: #ffffff;
   color: #000000;
 }
 .header-block a {
@@ -82,7 +80,7 @@ h6 {
 /*ends Header*/
 /*Content*/
 .content-block {
-  background: #28a60b;
+  background: #ffffff;
 }
 /*ends Content*/
 /*Footer*/
