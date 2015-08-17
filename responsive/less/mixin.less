@@ -1,0 +1,102 @@
+//@import url('base.less');  //базовый файл с настройками переменных
+.no-wrap{	
+	overflow: hidden;
+	white-space: nowrap;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	width: 100%;
+}
+.mixin-headings(@font-family: 'ClearSansLight', @font-size: 20px, @line-height: 26px, @color: #000){
+	font-family: @font-family;
+	font-size: @font-size;
+	line-height: @line-height;
+	color: @color;
+}
+.mixin-basket-icon(@b-font-size, @c-top, @c-left){
+	position: relative;
+	display: inline-block;
+	&:before{
+		font-family: @icon-custom;
+		content: @icon-basket;
+		color: @white;
+		display: inline-block;	
+		vertical-align: middle;
+		font-size: @b-font-size; //30px;
+		line-height: 31px;
+		margin-right: 10px;
+	}
+	span{
+		position: absolute;
+		background: @red;
+		border-radius: 50%;
+		color: @white;
+		text-align: center;
+		display: block;
+		width: 21px;
+		font-size: 12px;
+		line-height: 21px;
+		top: @c-top; //-1px;
+		left: @c-left; //14px;
+	}
+}
+.mixin-transform(@x, @y, @deg){
+	-moz-transform: translateX(@x) translateY(@y) rotate(@deg);
+	-webkit-transform: translateX(@x) translateY(@y) rotate(@deg);
+	-o-transform: translateX(@x) translateY(@y) rotate(@deg);
+	-ms-transform: translateX(@x) translateY(@y) rotate(@deg);
+	transform: translateX(@x) translateY(@y) rotate(@deg);
+}
+
+#gradient {
+	.vertical(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%) {
+	background-image: -webkit-linear-gradient(top, @start-color @start-percent, @end-color @end-percent);  // Safari 5.1-6, Chrome 10+
+	background-image: -o-linear-gradient(top, @start-color @start-percent, @end-color @end-percent);  // Opera 12
+	background-image: linear-gradient(to bottom, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+	background-repeat: repeat-x;
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@start-color),argb(@end-color))); // IE9 and down
+	}
+}
+.inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @color: 255, @alpha: 0.4) {
+	-webkit-box-shadow: inset @horizontal @vertical @blur rgba(@color, @color, @color, @alpha);
+	-moz-box-shadow: inset @horizontal @vertical @blur rgba(@color, @color, @color, @alpha);
+	box-shadow: inset @horizontal @vertical @blur rgba(@color, @color, @color, @alpha); 
+}
+
+.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+	-webkit-border-top-right-radius: @topright;
+	-webkit-border-bottom-right-radius: @bottomright;
+	-webkit-border-bottom-left-radius: @bottomleft;
+	-webkit-border-top-left-radius: @topleft;
+	-moz-border-radius-topright: @topright;
+	-moz-border-radius-bottomright: @bottomright;
+	-moz-border-radius-bottomleft: @bottomleft;
+	-moz-border-radius-topleft: @topleft;
+	border-top-right-radius: @topright;
+	border-bottom-right-radius: @bottomright;
+	border-bottom-left-radius: @bottomleft;
+	border-top-left-radius: @topleft;
+}
+
+.transform(...) {
+	-webkit-transform: @arguments;
+	-moz-transform: @arguments;
+	-o-transform: @arguments;
+	-ms-transform: @arguments;
+	transform: @arguments;
+}
+.rotation(@deg:5deg){
+	.transform(rotate(@deg));
+}
+.rotation-translate(@deg:5deg, @x:0px, @y:0px){
+	.transform(rotate(@deg) translateX(@x) translateY(@y));
+}
+.scale(@ratio:1.5){
+  .transform(scale(@ratio));
+}
+.transition(@duration:0.2s, @ease:ease-out) {
+	-webkit-transition: all @duration @ease;
+	-moz-transition: all @duration @ease;
+	-o-transition: all @duration @ease;
+	transition: all @duration @ease;
+}
