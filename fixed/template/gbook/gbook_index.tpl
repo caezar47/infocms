@@ -8,3 +8,4 @@
 		{/foreach}
 	</div>
 </div>
+{$pagination}
